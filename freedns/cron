@@ -1,0 +1,1 @@
+1,6,11,16,21,26,31,36,41,46,51,56 * * * * sleep 27 ; wget --no-check-certificate -O - https://freedns.afraid.org/dynamic/update.php?[token]>> /tmp/freedns_minicloud_ignorelist_com.log 2>&1 &
