@@ -1,5 +1,5 @@
-resource "proxmox_vm_qemu" "vm-deploy-1" {
-    name = "tf-debian12-cloud"
+resource "proxmox_vm_qemu" "deploy-jenkins-1" {
+    name = "jenkins"
     # Notes inside PVE GUI
     desc = "A test for using terraform and cloudinit"
 

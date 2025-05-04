@@ -1,4 +1,4 @@
-resource "proxmox_lxc" "lxc-debian-1" {
+resource "proxmox_lxc" "deploy-lxc-1" {
     features {
         nesting = true
     }
