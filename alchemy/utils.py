@@ -9,6 +9,9 @@ PROXMOX_HOST = os.getenv("PROXMOX_HOST")
 API_TOKEN_ID = os.getenv("API_TOKEN_ID")
 API_TOKEN_SECRET = os.getenv("API_TOKEN_SECRET")
 
+# Testing gitleaks action
+TESTING_ACTIONS_SECRET = "password123456"
+
 # URL base delle API
 BASE_URL = f"https://{PROXMOX_HOST}:8006/api2/json"
 
