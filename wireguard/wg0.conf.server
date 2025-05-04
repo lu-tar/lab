@@ -1,0 +1,15 @@
+[Interface]
+Address = 192.168.254.1/29
+SaveConfig = true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
+PostUp = iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT
+PostDown = iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+ListenPort = 51820
+FwMark = 0xca6c
+PrivateKey =
+
+[Peer]
+PublicKey = 
+AllowedIPs = 192.168.254.0/29
+Endpoint = 192.168.1.25:50362
