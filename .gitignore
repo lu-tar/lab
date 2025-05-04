@@ -262,6 +262,9 @@ poetry.toml
 pyrightconfig.json
 
 ### Terraform ###
+terrafor.tfstate
+terrafor.tfstate.backup
+.terraform.lock.hcl
 # Local .terraform directories
 **/.terraform/*
 
