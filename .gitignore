@@ -265,6 +265,7 @@ pyrightconfig.json
 terrafor.tfstate
 terrafor.tfstate.backup
 .terraform.lock.hcl
+creadentials.auto.tfvars
 # Local .terraform directories
 **/.terraform/*
 
