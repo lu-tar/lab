@@ -1,4 +1,6 @@
 # Check credentials.auto.tfvars
+# terraform apply -var-file="credentials.tfvars"
+#
 # https://developer.hashicorp.com/terraform/language/values/variables
 # https://github.com/Telmate/terraform-provider-proxmox
 # To set lots of variables, it is more convenient to specify their values in a variable definitions file 
@@ -46,5 +48,4 @@ provider "proxmox" {
   pm_api_token_id = var.PROXMOX_USER
   pm_api_token_secret = var.PROXMOX_TOKEN
   pm_tls_insecure = true
-  pm_ci_password = var.CI_PASSWORD
 }
