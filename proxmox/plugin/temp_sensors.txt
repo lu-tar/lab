@@ -1,2 +1,0 @@
-wget https://raw.githubusercontent.com/Meliox/PVE-mods/main/pve-mod-gui-sensors.sh
-apt install hddtemp lm-sensors
