@@ -46,5 +46,5 @@ provider "proxmox" {
   pm_api_token_id = var.PROXMOX_USER
   pm_api_token_secret = var.PROXMOX_TOKEN
   pm_tls_insecure = true
-  pm_ci_password = var.CIPASSWORD
+  pm_ci_password = var.CI_PASSWORD
 }
