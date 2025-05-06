@@ -25,3 +25,20 @@ luca@microk8s-wk-1:~$ cat note.txt
     7  sudo shutdown -r now
     8  microk8s join 10.0.5.2:25000/0731d9c752532e122218e1e77392ba4a/4b5d18b3c81e --worker
     9  history > note.txt
+
+## Local link to image repo (solo per test senza usare Docker Hub)
+   65  sudo docker images
+   66  cat deployment.yaml
+   67  sudo docker save flask-app > flask-app.tar
+   68  ls
+   69  microk8s ctr image import flask-app.tar
+   70  microk8s ctr images list
+   71  microk8s ctr images list | grep flask
+   72  history 3
+   73  history 10
+   74  history 10 >> note.txt
+
+## service vs deployment K8s
+
+- deployment: pod lifecycle
+- service: loab balancing and networking
