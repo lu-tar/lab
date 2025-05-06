@@ -170,9 +170,9 @@ resource "proxmox_vm_qemu" "deploy-gitlab-1" {
     #ssh-rsa 9182739187293817293817293871== user@pc
     #EOF
 }
-# ------------MINIKUBE------------
-resource "proxmox_vm_qemu" "deploy-minikube-1" {
-    name = "minikube"
+# ------------MICROK8S------------
+resource "proxmox_vm_qemu" "deploy-microk8s-1" {
+    name = "microk8s"
     # Notes inside PVE GUI
     desc = "A test for using terraform and cloudinit"
 
@@ -240,7 +240,7 @@ resource "proxmox_vm_qemu" "deploy-minikube-1" {
         id = 0
         model = "virtio"
         firewall = false
-        bridge = "vmbr5"
+        bridge = "vmbr6"
         #tag = 256
     }
 
