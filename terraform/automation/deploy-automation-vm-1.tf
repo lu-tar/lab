@@ -418,7 +418,7 @@ resource "proxmox_vm_qemu" "deploy-microk8s-wk-2" {
 
     # Setup the ip address using cloud-init.
     boot = "order=scsi0"
-    ipconfig0 = "ip=10.0.5.3/24,gw=10.0.5.254"
+    ipconfig0 = "ip=10.0.5.4/24,gw=10.0.5.254"
     nameserver = "10.0.6.1"
     ciuser = "luca"
     sshkeys = var.PUBLIC_SSH_KEY
