@@ -42,3 +42,14 @@ luca@microk8s-wk-1:~$ cat note.txt
 
 - deployment: pod lifecycle
 - service: loab balancing and networking
+
+- create namespace 
+microk8s kubectl create namespace flask-app
+
+- Apply the deployment and service
+microk8s kubectl apply -f deployment.yaml -n flask-app
+microk8s kubectl apply -f service.yaml -n flask-app
+
+microk8s kubectl get pods -n flask-app
+
+
