@@ -1,0 +1,26 @@
+pipeline {
+  agent {
+    kubernetes {
+      yaml '''
+        apiVersion: v1
+        kind: Pod
+        spec:
+          containers:
+          - name: python
+            image: python:3.9.23-alpine3.22
+            command:
+            - cat
+            tty: true
+        '''
+    }
+  }
+  stages {
+    stage('Run python') {
+      steps {
+        container('python') {
+          sh 'python3 --version'
+        }
+      }
+    }
+  }
+}

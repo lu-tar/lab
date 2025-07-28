@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'IP', defaultValue: '10.0.1.7', description: 'Inserisci IP (default 10.0.1.7):')
+        string(name: 'PORT', defaultValue: '32001', description: 'PORTA (default 32001): ')
+    }
+
+    stages {
+        stage('Esegui script') {
+            steps {
+                script {
+                    // Esegue il file Python passando i parametri come argomenti da linea di comando
+                    sh "echo '${params.IP}'"
+                    sh "echo '${params.PORT}'"
+                    //sh "curl -s -o /dev/null -w '%{http_code}' https://${params.IP}:${params.PORT}/"
+                }
+            }
+        }
+    }
+}
